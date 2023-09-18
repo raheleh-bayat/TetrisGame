@@ -1,59 +1,45 @@
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>Island Racer</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="../styles/style.css" />
-  <title>Island Racer</title>
-</head>
+  <body>
+    <main>
+      <div id="game-container">
+        <div>
+          <h2>Stats</h2>
+          <p>Score: <span id="score">0</span></p>
+          <p>Lives: <span id="lives">3</span></p>
+        </div>
+        <br />
 
-<body>
-  <main>
-
-    <div id="game-container">
-      <div>
-        <h2>Stats</h2>
-        <p>Score: <span id="score">0</span></p>
-        <p>Lives: <span id="lives">3</span></p>
+        <div id="board"></div>
       </div>
-      <br />
-      <canvas id="game-Canvas"><p>salam</p></canvas>
-    </div>
 
-     <div id="game-intro">
+      <div id="game-intro">
         <!-- need a image  -->
-      <img src="./images/logo.png" alt="" class="logo-img" /> 
-      <br />
-      <button id="start-button">Start Game</button>
-    </div>
+        <!-- <img src="./images/logo.png" alt="" class="logo-img" />  -->
+        <br />
+        <button id="start-button">Start Game</button>
+      </div>
 
-    <div id="game-bottons">
-    <div class="game-play">
-        <button class="left"></button>
-      <button class="right"></button>
-      <button class="up"></button>
-      <button class="bottom"></button>
-    </div>
+      <div id="game-end">
+        <!-- <img src="./images/logo.png" alt="" class="logo-img" /> -->
+        <h1>Game Over</h1>
+        <br />
+        <button id="restart-button">Restart</button>
+      </div>
+    </main>
 
-    <div class="dorection">
-        <button class="direction-button">Rotate Direction</button>
-    </div>
-    </div>
+    <script type="text/javascript" src="./obstacle.js"></script>
+        <script type="text/javascript" src="./shape"></script>
 
-    
-    <div id="game-end">
-      <img src="./images/logo.png" alt="" class="logo-img" />
-      <h1>Game Over</h1>
-      <br />
-      <button id="restart-button">Restart</button>
-    </div>
-  </main>
-
-  <script type="text/javascript" src="./obstacle.js"></script>
-  <script type="text/javascript" src="./player.js"></script>
-  <script type="text/javascript" src="./game.js"></script>
-  <script type="text/javascript" src="./script.js"></script>
-</body>
-
+    <script type="text/javascript" src="./board.js"></script>
+    <script type="text/javascript" src="./game.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
 </html>
