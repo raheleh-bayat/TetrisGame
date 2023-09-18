@@ -2,89 +2,28 @@ body {
   padding: 0;
   margin: 0;
   text-align: center;
-  align-items:center ;
 }
 
-.game-play{
-    width: 200px;
-    height: 200px;
-   position: relative;
-}
+/* #board .pixel{
+  flex: 1 0 33%;
+  height: 50px;
+  border: 1px solid black;
+} */
 
-.right{
-    width: 60px;
-    height: 60px;
-    background-color:yellow;
-    border:solid yellow;
-    border-radius: 100px;
-    position: absolute;
-    right:-40px;
-    top:80px;
-}
-.left{
-     width: 60px;
-    height: 60px;
-    background-color:yellow;
-    border:solid yellow;
-    border-radius: 100px;
-    position: absolute;
-    left:30px;
-     top:80px;
-}
-.up{
-    width: 60px;
-    height: 60px;
-    border-radius: 100px;
-    border:solid yellow;
-    position: absolute;
-    background-color:yellow;
-    top:20px;
-    left:90px;
-}
-.bottom{
-     width: 60px;
-    height: 60px;
-    border-radius: 100px;
-    border:solid yellow;
-     background-color:yellow;
-    position: absolute;
-     bottom:10px;
-     left:90px;
-}
-.dorection{
-    width: 100px;
-    height: 100px;
-    position: relative;
-}
-.direction-button{
-    width: 60px;
-    height: 60px;
-    border-radius: 100px;
-    border:solid yellow;
-    background-color:yellow;
-    color: white;
-    position: absolute;
-    top:80px;
-    right: -60px;
-}
-#game-bottons{
-    width: 250px;
-    height: 250px;
-    margin-left: 590px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-.game-Canvas{
-     animation: slide 5s linear infinite;
-     position: relative;
-     background-image: url();
-}
 #game-container {
   display: flex;
-  width: 100vw;
   justify-content:center;
 }
 #game-end {
   display: none;
 }
+ .pixel {
+            width: 10px;
+            border: 1px solid rgb(2, 2, 118);
+            height: 10px;
+            padding: 2px;
+
+        }
+/* #game-start canvas, #pixel {
+  position: absolute;
+} */
