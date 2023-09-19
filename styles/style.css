@@ -12,18 +12,28 @@ body {
 
 #game-container {
   display: flex;
-  justify-content:center;
+  justify-content: center;
 }
 #game-end {
   display: none;
 }
- .pixel {
-            width: 10px;
-            border: 1px solid rgb(2, 2, 118);
-            height: 10px;
-            padding: 2px;
-
-        }
+.pixel {
+  width: 10px;
+  border: 1px solid rgb(2, 2, 118);
+  height: 10px;
+  padding: 2px;
+}
+.logo-img {
+  width: 200px;
+  height: 200px;
+}
+#start-button {
+  background-color: blueviolet;
+  width: 150px;
+  height: 100px;
+  color: white;
+  border-radius: 10px;
+}
 /* #game-start canvas, #pixel {
   position: absolute;
 } */
