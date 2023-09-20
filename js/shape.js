@@ -1,7 +1,5 @@
 class Shape {
-  constructor() {
-    
-  }
+  constructor() {}
 
   getDimensions() {
     return this.dimensions;
@@ -41,7 +39,6 @@ class Shape {
     this.dimensions[2][1] -= 1;
     this.dimensions[3][1] -= 1;
   }
-
 }
 
 class Z extends Shape {
@@ -108,9 +105,9 @@ class B extends Shape {
     ];
   }
 
-    rotate() {
-      return false;
-    }
+  rotate() {
+    return false;
+  }
 }
 
 class I extends Shape {
@@ -127,6 +124,10 @@ class I extends Shape {
 
   rotate() {
     if (this.dir == "line") {
+      if (this.dimensions[3][0] + 1 >= 11 || this.dimensions[0][0] - 2 < 0) {
+        return;
+      }
+
       this.dimensions[0][0] -= 2;
       this.dimensions[0][1] += 2;
 
@@ -138,6 +139,9 @@ class I extends Shape {
 
       this.dir = "down";
     } else {
+      if (this.dimensions[3][1] + 1 >= 11 || this.dimensions[0][1] -2 < 0) {
+        return;
+      }
       this.dimensions[0][0] += 2;
       this.dimensions[0][1] -= 2;
 
@@ -150,4 +154,8 @@ class I extends Shape {
       this.dir = "line";
     }
   }
+
+  // if(){
+
+  // }
 }

@@ -1,4 +1,4 @@
-### Tetris Game
+<!-- ### Tetris Game -->
 
 
 ## Description
@@ -46,7 +46,7 @@ The MVP (Minimum Viable Product) of the Tetris Game is to create a basic, functi
    - Display a game board grid where Tetrominos will be placed.
 
 2. **Tetrominos**:
-   - Implement the four classic Tetromino shapes: I, J, L, and T.
+   - Implement the four classic Tetromino shapes: I,#,.
    - Tetrominos should be randomly generated and fall from the top of the game board.
 
 3. **Movement**:
