@@ -21,26 +21,23 @@ class Board {
       return list[rand];
     }
 
-     function checkRaw(matrix){
-    let result= [];
+    function checkRaw(matrix) {
+      let result = [];
 
-          for (var i = 0; i < matrix.length; i++) {
-            let full=true;
-            for (var j = 0; j < matrix[i].length; j++) {
-                if(!matrix[i][j].flag){
-
-                  full=false;
-                  break;
-                }
-            }
-
-            if(full){
-              result.push(i);
-            }
+      for (var i = 0; i < matrix.length; i++) {
+        let full = true;
+        for (var j = 0; j < matrix[i].length; j++) {
+          if (!matrix[i][j].flag) {
+            full = false;
+            break;
           }
-
-          return result;
-  }
+        }
+        if (full) {
+          result.push(i);
+        }
+      }
+      return result;
+    }
 
     let moveDirection = "";
     document.addEventListener("keydown", function (event) {
@@ -56,10 +53,19 @@ class Board {
       }
     });
 
-    let currentShape = null;
+    let repeat = 0;
+    let scoreSum = 0;
+
+    let currentShape = getShape();
     function myCallback() {
       if (!currentShape) {
+        if(repeat ==1){
+          alert("Game Over");
+           clearInterval(intervalID);
+         return;
+        }
         currentShape = getShape();
+        repeat=0;
       }
 
       const d = currentShape.getDimensions();
@@ -68,8 +74,8 @@ class Board {
       }
 
       var board = document.getElementById("board");
-      for (var i = 0; i < matrix.length; i++) {
-        for (var j = 0; j < matrix[i].length; j++) {
+      for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix[i].length; j++) {
           if (matrix[i][j].flag) {
             matrix[i][j].elem.style.backgroundColor = "red";
           } else {
@@ -94,26 +100,65 @@ class Board {
       currentShape.move();
 
       let newD = currentShape.getDimensions();
-      console.log(newD);
+
       for (let k = 0; k < 4; k++) {
         if (newD[k][0] >= 17 || matrix[newD[k][0] + 1][newD[k][1]].flag) {
           for (let j = 0; j < 4; j++) {
             matrix[d[j][0]][d[j][1]].flag = true;
           }
+
+          // Check if a full row detected
           var res = checkRaw(matrix);
-          if(res.length!=0){
-            for(let s=0;s<res.length;s++){
-              for (let j = 0; j < matrix[s].length; j++) {
-              matrix[res[s]][j].flag = false;
+
+          if (res.length != 0) {
+            for (let s = 0; s < res.length; s++) {
+              for (let j = 0; j < matrix[res[s]].length; j++) {
+                matrix[res[s]][j].flag = false;
               }
             }
-         
+
+            // Shift every row to down
+
+              for (let i = res[0]-1; i > 0; i--) {
+                for (let j = 0; j < matrix[i].length; j++) {
+                  if (matrix[i][j].flag) {
+       
+                    matrix[i][j].flag = false;
+                    let l = i + res.length;
+              
+                    console.log(l);
+                    matrix[l][j].flag = true;
+                  }
+                }
+              }
+            
+
+            switch (res.length) {
+              case 1:
+                scoreSum += 100;
+                break;
+              case 2:
+                scoreSum += 300;
+                break;
+              case 3:
+                scoreSum += 500;
+                break;
+              case 4:
+                scoreSum += 800;
+                break;
+            }
+
+            this.score.innerHTML=scoreSum;
+
+            
           }
+
           currentShape = null;
         }
       }
 
       moveDirection = "";
+      repeat++;
     }
 
     const intervalID = setInterval(myCallback, 200);
@@ -124,6 +169,4 @@ class Board {
     }, 1000000);
     console.log(matrix);
   }
-
- 
 }
