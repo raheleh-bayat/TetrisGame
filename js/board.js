@@ -60,9 +60,9 @@ class Board {
     function myCallback() {
       if (!currentShape) {
         if(repeat ==1){
-          alert("Game Over");
+          location.reload("http://127.0.0.1:5500/index.html");
            clearInterval(intervalID);
-         return;
+         return ;
         }
         currentShape = getShape();
         repeat=0;

@@ -17,7 +17,8 @@ window.addEventListener('load', () => {
   })
 
   restartButton.addEventListener('click' , function (){
-    this.board.reload();
+     location.reload("http://127.0.0.1:5500/index.html");
+
   })
   
 })
