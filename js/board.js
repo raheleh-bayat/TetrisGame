@@ -60,7 +60,7 @@ class Board {
     function myCallback() {
       if (!currentShape) {
         if(repeat ==1){
-          location.reload("http://127.0.0.1:5500/index.html");
+           location.reload("http://127.0.0.1:5500/index.html");
            clearInterval(intervalID);
          return ;
         }
