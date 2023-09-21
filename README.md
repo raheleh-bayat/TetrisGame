@@ -39,40 +39,32 @@ This is a classic Tetris game implemented in JavaScript. Play and enjoy the chal
 
 The MVP (Minimum Viable Product) of the Tetris Game is to create a basic, functional version of the classic Tetris game. The MVP serves as the foundation for further development and feature enhancements.
 
-### Minimum Features
+### MVP
 
-1. **Game Board**:
+ **Game Board**:
    - Display a game board grid where Tetrominos will be placed.
-
-2. **Tetrominos**:
+ **Tetrominos**:
    - Implement the four classic Tetromino shapes: I,#,.
    - Tetrominos should be randomly generated and fall from the top of the game board.
-
-3. **Movement**:
+ **Movement**:
    - Allow players to move Tetrominos left and right using keyboard arrow keys.
-
-4. **Rotation**:
+ **Rotation**:
    - Enable Tetrominos to rotate 90 degrees clockwise using the up arrow key.
-
-5. **Falling**:
+ **Falling**:
    - Tetrominos should automatically fall down at a constant rate.
    - Players should be able to manually accelerate the fall by pressing the down arrow key.
-
-6. **Collision Detection**:
+ **Collision Detection**:
    - Detect and prevent Tetrominos from moving beyond the boundaries of the game board.
    - Detect when a Tetromino reaches the bottom or collides with other Tetrominos.
-
-7. **Row Clearing**:
+ **Row Clearing**:
    - Check for completed rows (filled with Tetrominos).
    - Clear completed rows and shift above rows down.
-
-8. **Scoring**:
+ **Scoring**:
    - Keep track of the player's score based on the number of rows cleared.
-
-9. **Game Over**:
+**Game Over**:
    - End the game when a new Tetromino cannot be placed at the top of the game board.
 
-10. **User Interface**:
+ **User Interface**:
     - Display the player's current score.
     - Provide a simple start/restart button to begin a new game or restart the current game.
 
@@ -128,14 +120,8 @@ Represents a Tetromino (I,#,Z shapes).
 - `showStartScreen()`: Displays the start/restart button.
 
 
-### Extra Links
-
-
-### Slides
-
-
 ### Deploy
 
-
+ https://raheleh-bayat.github.io/TetrisGame/
 
 
