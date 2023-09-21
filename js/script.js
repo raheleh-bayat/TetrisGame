@@ -16,23 +16,9 @@ window.addEventListener('load', () => {
     startGame();
   })
 
-  // document.addEventListener('keydown' , event => {
-  //   console.log('down' , event)
-  //   if(event.code === 'KeyA'){
-  //       board.directionx = -1
-  //   }else if (event.code === "KeyD") {
-  //     board.directionY = 1
-  //   } 
-  // })
-
-  // document.addEventListener('keypress' , event => {
-  //     console.log('up' , event);
-  //     if (event.code === "KeyA" || event.code === "KeyD") {
-  //       board.directionx = 0;
-  //     }
-  // })
-  
-
+  restartButton.addEventListener('click' , function (){
+    this.board.reload();
+  })
   
 })
 

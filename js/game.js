@@ -16,6 +16,15 @@ class Game {
     this.marginLeft = 20;
     this.borderRadius = 10;
     this.example =0; 
+    const imageElement = document.createElement("img");
+    imageElement.alt = "Image Alt Text";
+    imageElement.width = 1500;
+    imageElement.height = 600;
+    imageElement.zindex= -1;
+    imageElement.objectfit= "cover";
+    imageElement.src = "./Image/building-blocks-2026721_1280.png";
+    document.body.appendChild(imageElement)
+    this.gameIsOver=false;
   }
 
   start(){
@@ -40,14 +49,11 @@ class Game {
 
   }
 
-  gameloop(){
-    this.update()
-    console.log(this.example);
-    requestAnimationFrame(() => this.gameloop());
-    
-  }
+   gameLoop() {
+    if (!this.gameIsOver) {
+      return this.board.reload();
+    }
+   }
 
-  update(){
-    history.example += 1;
-  } 
+
 }

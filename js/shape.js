@@ -154,8 +154,4 @@ class I extends Shape {
       this.dir = "line";
     }
   }
-
-  // if(){
-
-  // }
 }

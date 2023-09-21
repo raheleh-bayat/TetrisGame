@@ -1,15 +1,15 @@
-<!-- ### Tetris Game -->
+ ### Tetris Game
 
 
 ## Description
+
 This is a classic Tetris game implemented in JavaScript. Play and enjoy the challenge of stacking Tetrominos!
 
 ## Game Controls
+
 - Move Left: Left Arrow Key
 - Move Right: Right Arrow Key
 - Rotate: Up Arrow Key
-- Drop Faster: Down Arrow Key
-- Pause/Resume: P Key
 
 ## Features
 - Scoring system
@@ -30,11 +30,10 @@ This is a classic Tetris game implemented in JavaScript. Play and enjoy the chal
 - JS Audio() and JS Image()
 
 ## States
+
 . Start Screen
 . Game Screen
 . Game Over Screen
-
-
 
 ### Objective
 
@@ -80,7 +79,7 @@ The MVP (Minimum Viable Product) of the Tetris Game is to create a basic, functi
 
 ### Tetromino Class
 
-Represents a Tetromino (e.g., I, J, L, T shapes).
+Represents a Tetromino (I,#,Z shapes).
 
 **Methods**:
 - `constructor(shape)`: Creates a new Tetromino with the specified shape.
@@ -92,8 +91,6 @@ Represents a Tetromino (e.g., I, J, L, T shapes).
 
 ### GameBoard Class
 
-Represents the game board grid.
-
 **Methods**:
 - `constructor(rows, columns)`: Creates a game board with the specified dimensions.
 - `clearRow(row)`: Clears a specific row on the game board.
@@ -102,8 +99,6 @@ Represents the game board grid.
 - `removeTetromino(tetromino)`: Removes a Tetromino from the game board.
 
 ### GameManager Class
-
-Manages the game logic and interactions.
 
 **Methods**:
 - `constructor(board, tetrominoFactory)`: Initializes the game manager with a game board and a Tetromino factory.
@@ -120,18 +115,13 @@ Manages the game logic and interactions.
 
 ### TetrominoFactory Class
 
-Generates random Tetrominos.
-
 **Methods**:
 - `constructor()`: Initializes the Tetromino factory.
 - `generateRandomTetromino()`: Generates a random Tetromino.
 
 ### UserInterface Class
 
-Manages the user interface elements (e.g., score display, start/restart button).
-
 **Methods**:
-- `constructor()`: Initializes the user interface.
 - `updateScore(score)`: Updates the displayed score.
 - `showGameOverScreen()`: Displays the game over screen.
 - `hideGameOverScreen()`: Hides the game over screen.
